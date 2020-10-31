@@ -13,10 +13,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
-mongoose.connect("mongodb://localhost/workout", {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-});
+
+mongoose.connect(
+    process.env.MONGODB_URI ||
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false,
+        useCreateIndex: true,
+    }
+
+);
 
 app.use(require("./routes/api.js"));
 app.use(require("./routes/view.js"));
