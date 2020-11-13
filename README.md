@@ -3,6 +3,7 @@
   ## Description
   As a backend developer I created the workout database. The user is able to add exercises to a previous workout plan. Add new exercises to a new workout plan. And...view the combined
   ## Heroku Application
+  Exercise Application Link
     [Exercise App](http://shrouded-waters-77393.herokuapp.com/)
   
   ## Table of Contents
